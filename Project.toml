@@ -1,2 +1,8 @@
+name = "MsgPackRPC"
+uuid = "d991bb31-4c78-534a-9509-7e65fd18fe59"
+author = "Changxin Sun"
+version = "0.1.0"
+
 [deps]
 MsgPack = "99f44e22-a591-53d1-9472-aa23ef4bd671"
+Sockets = "6462fe0b-24de-5631-8697-dd941f90decc"
