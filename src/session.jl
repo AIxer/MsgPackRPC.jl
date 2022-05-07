@@ -13,6 +13,7 @@ function call(session, method, params...; timeout=0.001, interval=0.001)
     session.msgid += 1
     msg = pack([REQUEST, msgid, method, params])
     write(session.sock, msg)
+    # ! assume work perfectly ...
     res = unpack(readavailable(session.sock))
     # [1, msgid, error, result]
     @inbounds if res[1] != 1 || res[2] != msgid || !isnothing(res[3])
